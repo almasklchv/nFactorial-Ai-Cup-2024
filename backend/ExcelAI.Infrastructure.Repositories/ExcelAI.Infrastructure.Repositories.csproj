@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExcelAI.Domain\ExcelAI.Domain.csproj" />
+    <ProjectReference Include="..\ExcelAI.Infrastructure.DAL\ExcelAI.Infrastructure.DAL.csproj" />
+  </ItemGroup>
+
+</Project>

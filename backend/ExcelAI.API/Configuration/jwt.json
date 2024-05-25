@@ -1,0 +1,8 @@
+{
+  "Jwt": {
+    "Issuer": "127.0.0.1",
+    "Audience": "127.0.0.1",
+    "Lifetime": "1440",
+    "Key": "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"
+  }
+}

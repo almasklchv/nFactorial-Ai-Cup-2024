@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelAI.API", "ExcelAI.API\ExcelAI.API.csproj", "{803F15FA-496A-468F-A55B-727E56569443}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelAI.Domain", "ExcelAI.Domain\ExcelAI.Domain.csproj", "{79561D1D-370C-4B05-91A4-440FBBFB3AEA}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{595A8974-77BD-444D-A25F-D7BAB7AB89D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelAI.Infrastructure.DAL", "ExcelAI.Infrastructure.DAL\ExcelAI.Infrastructure.DAL.csproj", "{5E9AA930-59A9-4A53-98D5-8E8D8A085F88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelAI.Infrastructure.ExternalServices", "ExcelAI.Infrastructure.ExternalServices\ExcelAI.Infrastructure.ExternalServices.csproj", "{307F49C0-9FAE-4A9E-8288-A750D5018ACE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelAI.Infrastructure.Repositories", "ExcelAI.Infrastructure.Repositories\ExcelAI.Infrastructure.Repositories.csproj", "{1215CEC3-467F-473F-86C5-38F27BDE1B2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelAI.Mapping", "ExcelAI.Mapping\ExcelAI.Mapping.csproj", "{5F036FB0-A044-4211-B1E3-D1C752C1172E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExcelAI.Infrastructure.Files", "ExcelAI.Infrastructure.Files\ExcelAI.Infrastructure.Files.csproj", "{4415B534-6550-41D0-BAB4-9C4609CE0D69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelAI.Domain.Excel", "ExcelAI.Domain.Excel\ExcelAI.Domain.Excel.csproj", "{D30F33EB-566B-4447-864D-0A903D119F0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{803F15FA-496A-468F-A55B-727E56569443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{803F15FA-496A-468F-A55B-727E56569443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{803F15FA-496A-468F-A55B-727E56569443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{803F15FA-496A-468F-A55B-727E56569443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79561D1D-370C-4B05-91A4-440FBBFB3AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79561D1D-370C-4B05-91A4-440FBBFB3AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79561D1D-370C-4B05-91A4-440FBBFB3AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79561D1D-370C-4B05-91A4-440FBBFB3AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595A8974-77BD-444D-A25F-D7BAB7AB89D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595A8974-77BD-444D-A25F-D7BAB7AB89D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595A8974-77BD-444D-A25F-D7BAB7AB89D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595A8974-77BD-444D-A25F-D7BAB7AB89D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E9AA930-59A9-4A53-98D5-8E8D8A085F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9AA930-59A9-4A53-98D5-8E8D8A085F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9AA930-59A9-4A53-98D5-8E8D8A085F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9AA930-59A9-4A53-98D5-8E8D8A085F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{307F49C0-9FAE-4A9E-8288-A750D5018ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307F49C0-9FAE-4A9E-8288-A750D5018ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{307F49C0-9FAE-4A9E-8288-A750D5018ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{307F49C0-9FAE-4A9E-8288-A750D5018ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1215CEC3-467F-473F-86C5-38F27BDE1B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1215CEC3-467F-473F-86C5-38F27BDE1B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1215CEC3-467F-473F-86C5-38F27BDE1B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1215CEC3-467F-473F-86C5-38F27BDE1B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F036FB0-A044-4211-B1E3-D1C752C1172E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F036FB0-A044-4211-B1E3-D1C752C1172E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F036FB0-A044-4211-B1E3-D1C752C1172E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F036FB0-A044-4211-B1E3-D1C752C1172E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4415B534-6550-41D0-BAB4-9C4609CE0D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4415B534-6550-41D0-BAB4-9C4609CE0D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4415B534-6550-41D0-BAB4-9C4609CE0D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4415B534-6550-41D0-BAB4-9C4609CE0D69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30F33EB-566B-4447-864D-0A903D119F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30F33EB-566B-4447-864D-0A903D119F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30F33EB-566B-4447-864D-0A903D119F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30F33EB-566B-4447-864D-0A903D119F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4C4C86B-3330-488D-9ACA-33D1F3F140F2}
+	EndGlobalSection
+EndGlobal

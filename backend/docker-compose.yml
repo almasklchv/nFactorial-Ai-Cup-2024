@@ -1,0 +1,42 @@
+version: '3.4'
+
+services:
+    excelai.api:
+        image: ${DOCKER_REGISTRY-}excelaiapi
+        build:
+            context: .
+            dockerfile: ExcelAI.API/Dockerfile
+        depends_on:
+            - mysql
+            - prometheus
+        ports:
+            - "5000:5000"
+
+    mysql:
+        image: mysql:latest
+        environment:
+            MYSQL_ROOT_PASSWORD:    mysql_root
+            MYSQL_DATABASE:         excel_ai
+            MYSQL_USER:             excel_ai_api
+            MYSQL_PASSWORD:         excel_ai_api
+            MYSQL_LOG_CONSOLE:      "ERROR"
+        ports:
+            - "3306:3306"
+
+    excelai.metrics:
+        image: yellow1cucumber/excel-ai-bot:latest
+        ports:
+            - "8000:8000"
+        depends_on:
+            - excelai.api
+
+
+    prometheus:
+        image: prom/prometheus
+        volumes:
+            - ./prometheus:/etc/prometheus
+        command:
+            - '--config.file=/etc/prometheus/prometheus.yml'
+        ports:
+            - "9090:9090"
+  

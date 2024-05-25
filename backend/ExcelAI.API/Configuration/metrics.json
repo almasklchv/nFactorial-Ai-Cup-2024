@@ -1,0 +1,5 @@
+{
+  "Metrics": {
+    "EndpointURL": "http://excelai.metrics:8000/send_metrics"
+  }
+}
