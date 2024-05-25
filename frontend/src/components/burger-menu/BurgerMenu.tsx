@@ -1,6 +1,6 @@
 const BurgerMenu = () => {
   return (
-    <div className="bg-primary p-10">
+    <div className="block md:hidden bg-primary p-10">
       <nav className="flex flex-col text-center gap-5">
         <a className="text-white text-[18px]" href="/">
           Home

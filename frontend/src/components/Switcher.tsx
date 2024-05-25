@@ -22,19 +22,20 @@ const Switcher: React.FC<SwitcherProps> = ({
   const handlePeriodChange = () => {
     onSwitch();
   };
+
   return (
     <div
-      className={`${className} flex md:max-w-[400px] xl:max-w-[574px] bg-primary rounded-[20px]`}
+      className={`flex max-w-[350px] bg-primary rounded-[10px] ${className}`}
     >
       <div
         onClick={handlePeriodChange}
-        className={`shadow-md text-[12px] sm:text-[15px] md:text-[18px] xl:text-[25px] text-center transition-all duration-300 md:w-[200px] xl:w-[287px]   rounded-[20px] ${bgColorA} py-[10px] sm:py-[15px] md:py-[20px] xl:py-[31px] px-[10px] sm:px-[20px] md:px-[40px] xl:px-[60px] cursor-pointer  ${colorM}`}
+        className={`shadow-md text-[10px] sm:text-[12px] md:text-[14px] text-center transition-all duration-300 w-[200px] rounded-[10px] ${bgColorA} py-[5px] sm:py-[10px] px-[10px] cursor-pointer ${colorM}`}
       >
         {variants[0]}
       </div>
       <div
         onClick={handlePeriodChange}
-        className={`shadow-md text-[12px] sm:text-[15px] md:text-[18px] xl:text-[25px] text-center transition-all duration-300 md:w-[200px] xl:w-[287px]  rounded-[20px] ${bgColorM} py-[10px] sm:py-[15px] md:py-[20px] xl:py-[31px] px-[15px] sm:px-[20px] md-px-[40px] xl:px-[60px] cursor-pointer ${colorA} `}
+        className={`shadow-md text-[10px] sm:text-[12px] md:text-[14px] text-center transition-all duration-300 w-[200px] rounded-[10px] ${bgColorM} py-[5px] sm:py-[10px] px-[10px] cursor-pointer ${colorA}`}
       >
         {variants[1]}
       </div>

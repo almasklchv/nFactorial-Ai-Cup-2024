@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -15,8 +16,8 @@ const Hero = () => {
             <p className="text-[15px] sm:text-[20px] md:text-[15px] xl:text-[25px] 2xl:text-[35px] opacity-65 mr-5 sm:mr-10">
               Are you interested?
             </p>
-            <Button className="font-bold text-[8.4px] md:text-[10.4px] xl:text-[18.4px] 2xl:text-[22.4px] rounded-[26px] h-[25px] md:w-[70px] md:h-[30px] xl:w-[28%] xl:h-[40px] 2xl:h-[50px] 2xl:w-[20%]">
-              SIGN UP
+            <Button className="font-bold text-[8.4px] md:text-[10.4px] xl:text-[18.4px] 2xl:text-[22.4px] rounded-[26px] h-[25px] md:w-[70px] md:h-[30px] xl:w-[28%] xl:h-[40px] 2xl:h-[50px] 2xl:w-[20%] p-[10px]">
+              <Link to='/generate'>GET STARTED</Link>
             </Button>
           </div>
         </div>
