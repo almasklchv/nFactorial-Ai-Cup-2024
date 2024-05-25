@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useDropzone } from 'react-dropzone';
 import axios from 'axios';
 import { saveAs } from 'file-saver';
+import styles from './generate.module.css';
 
 interface FileWithProgress {
   file: File;
@@ -14,9 +15,7 @@ interface FileWithProgress {
 
 const Generate = () => {
   const [images, setImages] = useState<FileWithProgress[]>([]);
-  const [uploadProgress, setUploadProgress] = useState<Record<string, number>>(
-    {}
-  );
+  const [uploadProgress, setUploadProgress] = useState<Record<string, number>>({});
   const [isUploading, setIsUploading] = useState(false);
 
   const onDrop = (acceptedFiles: File[]) => {
@@ -26,7 +25,7 @@ const Generate = () => {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept: {
-      'image/*': [],
+      'image/*': []
     },
     onDrop,
     multiple: true,
@@ -90,40 +89,31 @@ const Generate = () => {
     <Wrapper>
       <Header linksColor="#000" />
       <Title />
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <div className={styles.container}>
         <div
           {...getRootProps()}
-          className={`flex flex-col justify-center items-center mt-12 border-2 border-dashed p-8 ${isDragActive ? 'border-blue-500' : 'border-gray-300'}`}
-          style={{ minHeight: '200px', width: '50%', textAlign: 'center' }}
+          className={`${styles.dropzone} ${isDragActive ? styles.active : ''}`}
         >
           <input {...getInputProps()} />
           {isDragActive ? (
             <p>Drop the files here ...</p>
           ) : (
             <div>
-              <p>
-                Drag &apos;n&apos; drop some files here, or click to select
-                files
-              </p>
+              <p>Drag &apos;n&apos; drop some files here, or click to select files</p>
               <Button style={{ marginTop: '10px' }}>Upload</Button>
             </div>
           )}
-          <div className="mt-4 w-full">
+          <div className={styles['file-list']}>
             {images.map(({ file }, index) => (
-              <div
-                key={index}
-                className="flex justify-between items-center p-2 border-b border-gray-200"
-              >
+              <div key={index} className={styles['file-item']}>
                 <span>{file.name}</span>
                 {!isUploading && (
-                  <Button onClick={(event) => handleRemove(file, event)}>
-                    Remove
-                  </Button>
+                  <Button onClick={(event) => handleRemove(file, event)}>Remove</Button>
                 )}
                 {uploadProgress[file.name] !== undefined && (
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                  <div className={styles['progress-bar']}>
                     <div
-                      className="bg-blue-600 h-2.5 rounded-full"
+                      className={styles.progress}
                       style={{ width: `${uploadProgress[file.name]}%` }}
                     ></div>
                   </div>
@@ -133,7 +123,6 @@ const Generate = () => {
           </div>
         </div>
       </div>
-
       <div className="flex justify-center mt-12">
         <Button
           style={{
