@@ -1,5 +1,5 @@
 {
-  "ApiKey": "sk-proj-EelFuvqujUX4DoXtSB36T3BlbkFJ2ciiFge2raty6NtoOpDY",
+  "ApiKey": "sk-proj-yjrYDq9YsOEiIEtZQdIrT3BlbkFJAlAksegiWIEpByMtufnQ",
   "DefaultPromts": {
     "GetDataTableFromImages": "Could you form me CSV from this images?",
     "GetDataTableFromImagesWithSpecifiedHeaders": "Could you form me CSV with specified headers: "
